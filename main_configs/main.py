@@ -1,18 +1,43 @@
 from pathlib import Path
+
+import threading
+import itertools
+import time
 import sys
 
-# FOR GOOGLE COLAB & NOTEBOOKS #
 try:
     CURRENT_FILE = Path(__file__).resolve()
     CONFIGS_DIR = CURRENT_FILE.parent
 except NameError:
-    print("⚠️ Detected Notebook Environment. Using fallback paths. ⚠️")
-    CONFIGS_DIR = Path("/content/CHANGE_NAME_OF_REPOSITORY/main_configs").resolve()
+    print("Detected Notebook Environment. Using fallback paths.")
+    possible_paths = [
+        Path("/content/Simplified-How-LLMs-Work-Visualized/main_configs"),
+        Path("/content/Simplified-LLMs-Visulized/main_configs")
+    ]
+    CONFIGS_DIR = None
+    for p in possible_paths:
+        if p.exists():
+            CONFIGS_DIR = p.resolve()
+            break
+            
+    if CONFIGS_DIR is None:
+        import glob
+        found = glob.glob("/content/**/main_configs", recursive=True)
+        if found:
+            CONFIGS_DIR = Path(found[0]).resolve()
+        else:
+            raise FileNotFoundError("Could not locate the main_configs folder.")
 
 PROJECT_ROOT = CONFIGS_DIR.parent
 SRC_DIR = PROJECT_ROOT / "src"
 EXPORT_DIR = PROJECT_ROOT / "export"
 PROMPTS_DIR = CONFIGS_DIR / "prompts"
+
+EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+if not SRC_DIR.exists():
+    raise FileNotFoundError(f"Could not find 'src' directory at: {SRC_DIR}")
+sys.path.append(str(SRC_DIR))
 
 # NOTE README!!! NOTE
 """
