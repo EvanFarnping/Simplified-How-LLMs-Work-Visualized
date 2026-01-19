@@ -1,0 +1,16 @@
+
+torch>=2.1.0
+accelerate>=0.27.0
+bitsandbytes>=0.41.0
+transformer_lens>=1.14.0
+transformers>=4.38.0
+numpy
+sentencepiece
+einops
+imageio
+matplotlib
+pyyaml
+jinja2
+huggingface_hub
+beautifulsoup4
+requests

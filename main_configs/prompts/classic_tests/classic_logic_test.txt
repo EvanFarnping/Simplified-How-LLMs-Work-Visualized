@@ -1,0 +1,3 @@
+Sally has 3 brothers. 
+Each of her brothers has 2 sisters. 
+How many sisters does Sally have? Explain your reasoning step-by-step.
