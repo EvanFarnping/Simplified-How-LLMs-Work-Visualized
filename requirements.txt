@@ -7,10 +7,11 @@ transformers>=4.38.0
 numpy<2
 sentencepiece
 einops
-imageio
+imageio[ffmpeg]
 matplotlib
 pyyaml
 jinja2
 huggingface_hub
 beautifulsoup4
 requests
+protobuf
