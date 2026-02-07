@@ -248,7 +248,8 @@ class ModelManager:
                                                            trust_remote_code=config["trust_remote_code"])
 
             active_device_map = "auto"
-            if "DeepSeek" in selection_name or "Qwen" in selection_name: # Due to cuda and cpu swap being poor.
+            is_heavy_qwen = "Qwen" in selection_name and "0.5B" not in selection_name and "1.7B" not in selection_name
+            if "DeepSeek" in selection_name or is_heavy_qwen: # Due to cuda and cpu swap being poor.
                 active_device_map = "cuda"
 
             if self.device == "cuda":
