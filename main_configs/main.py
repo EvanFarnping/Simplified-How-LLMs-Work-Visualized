@@ -169,7 +169,7 @@ COMP_PROMPT_A        = "What is the best way to make friends?" # TODO EDIT ME!
 COMP_PROMPT_B        = "How to make friends?" # TODO EDIT ME!
 COMP_STEPS           = 15
 COMP_TOP_K           = 5
-COMP_FRAME_DURATION  = 0.75
+COMP_FRAME_DURATION  = 0.50
 COMP_FILENAME        = EXPORT_DIR / "prediction_heatmap_comparison.mp4"
 RUN_COMPARISON_VIDEO = True
 
@@ -181,7 +181,7 @@ SCAN_FILENAME:       File path where the attention scan MP4 video will be saved.
 RUN_SCAN_VIDEO:      Toggle to True to execute this specific visualization task.
 """
 SCAN_PROMPT          = "Peter Piper picked a peck of pickled peppers."
-SCAN_FRAME_DURATION  = 0.75
+SCAN_FRAME_DURATION  = 0.50
 SCAN_FILENAME        = EXPORT_DIR / "all_you_need_is_attention.mp4"
 RUN_SCAN_VIDEO       = True
 
