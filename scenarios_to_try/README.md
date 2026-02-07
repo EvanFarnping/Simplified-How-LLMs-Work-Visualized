@@ -57,7 +57,7 @@ The scenarios are roughly grouped by the specific concept they visualize.
 
 ## Safety Note
 
-Some scenarios, particularly `safety_overrides` and `bias_in_roles`, are designed to elicit biased, incorrect, or potentially harmful outputs. This is intentional for the purpose of demonstrating alignment failures and the necessity of safety engineering. Do not rely on the outputs of these experiments for factual information. If sensative topics or content is a concern, avoid such scenarios, and monitor student activity closely.
+Some scenarios, particularly `safety_overrides` and `bias_in_roles`, are designed to elicit biased, incorrect, or potentially harmful outputs. This is intentional for the purpose of demonstrating alignment failures and the necessity of safety engineering. Do not rely on the outputs of these experiments for factual information. If sensitive topics or content is a concern, avoid such scenarios, and monitor student activity closely.
 
 ## Google Colab Note (Updated 1-24-2026):
 - V6e-1 TPU: 170 GB System Ram

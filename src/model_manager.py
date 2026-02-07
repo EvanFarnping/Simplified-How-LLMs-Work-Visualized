@@ -191,7 +191,7 @@ MODEL_MAP = {
 
     # NOTE. 
     # Once you start going beyond 50B+ parameter models, 
-    # you're dealing with very advanced models aiming to compete aginst mainstream models.
+    # you're dealing with very advanced models aiming to compete against mainstream models.
     # For example, most big and the most advance models have special designs and trillions of parameters. 
 }
 

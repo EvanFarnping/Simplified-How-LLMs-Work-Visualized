@@ -62,7 +62,7 @@ What to look for: If you act sad, does the AI move into the Sad or Passive quadr
 
 This visualizes the internal Attention Layers of the model. Both broken down, and averaged.
 
-What to look for: As the model reads a sentence, you can see which tokens it is focusing on. Is it paying attention to the subject? The verb? Or is it distracted? Whay do these patterns suggest?
+What to look for: As the model reads a sentence, you can see which tokens it is focusing on. Is it paying attention to the subject? The verb? Or is it distracted? What do these patterns suggest?
 
 ## The Models
 
@@ -81,7 +81,7 @@ Take a look at model_manager.py to learn more about different models.
 
 ## Personas
 
-You will see a file called personas.yaml. This controls the System Prompt. These are the hidden instructions given to the AI before you even start talking, klnd of like how ChatGPT uses GPT under the hood, where ChatGPT has a special system prompt you can't see.
+You will see a file called personas.yaml. This controls the System Prompt. These are the hidden instructions given to the AI before you even start talking, kind of like how ChatGPT uses GPT under the hood, where ChatGPT has a special system prompt you can't see.
 
 Examples:
 Sad: Forces the model to select lower-energy words.
@@ -163,8 +163,8 @@ The easiest way to use this project is via the included `Start_Here.ipynb` noteb
     * Restart from Step 1.
     * **Do not** attempt to run "Heavyweight" models on standard instances. 
 
-### 3. The "To Many Request" Error (Hugging Face)
-* **Symptom:** You are running things as usual and the terminal responds that you are sending to many requests. HuggingFace will likely be mentioned.
+### 3. The "Too Many Requests" Error (Hugging Face)
+* **Symptom:** You are running things as usual and the terminal responds that you are sending too many requests. HuggingFace will likely be mentioned.
 * **Cause:** The Token associated with HuggingFace is free, but does have rate limits.
     * *Example:* In Step 2, there is a token that is used to access the information from HuggingFace, the place with the AI models we are getting. 
 * **Solution:**
@@ -172,7 +172,7 @@ The easiest way to use this project is via the included `Start_Here.ipynb` noteb
     * Delete the old Token and then uncomment the other options. You can also just create your own if you are comfortable doing so.
     * Restart from step 2 to load in the new Token to have access again.
 
-### 3. "Module Not Found" Error
+### 4. "Module Not Found" Error
 * **Cause:** You likely ran Step 2 before Step 1 finished, or after a factory reset.
 * **Solution:** Run **Step 1**, wait for the crash/restart, then run **Step 2**.
 

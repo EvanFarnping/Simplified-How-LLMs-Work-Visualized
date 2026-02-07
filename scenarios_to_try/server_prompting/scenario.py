@@ -79,7 +79,7 @@ EDUCATIONAL TAKEAWAYS & MODEL NOTES
 1. IDENTITY:
    You will notice that simply changing the persona variable changes 
    the model's entire worldview. This shows that AI does not have 
-   a trrue "Self." Its identity is can just be a text file 
+   a true "Self." Its identity can just be a text file 
    injected before your conversation starts.
 
 2. THE ILLUSION OF CONSCIOUSNESS:

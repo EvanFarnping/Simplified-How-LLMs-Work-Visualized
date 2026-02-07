@@ -17,7 +17,7 @@ against a "Good" (Specific/Constrained) prompt.
 
 WHY ARE WE DOING THIS?
 Users often complain that AI writes "boring" or "generic" content. 
-This is can often be a user error, not a model error. When you give a vague prompt 
+This can often be a user error, not a model error. When you give a vague prompt 
 like "Write a story," the model statistically defaults to the most average, 
 common tropes found in its training data. By adding constraints, we force the 
 model to explore more specific, less "average" probability paths.
