@@ -5,6 +5,8 @@ Note that this project is not designed to build chatbots, agents, or production-
 There are several design decisions in this project that under normal conditions would be poor, such as the unloading of memory. However, these choices were made because most people using this project will have very limited familiarity with Python or coding. Requiring students to navigate files and change various settings would be challenging. 
 This project was done in my limited spare time in a few days over a few hours, so I couldn't make the effort to optimize everything properly, especially for an educational context perfectly.
 
+While I aimed for maximum accuracy, errors may still occur and or be present. Please feel free to reach out or submit a pull request with any corrections.
+
 ## How Do LLMs Actually Work
 
 Before running the code, it helps to understand what you are looking at.
@@ -122,10 +124,12 @@ Phi-4-mini will likely run on any computer built after COVID-19 Era.
 The easiest way to use this project is via the included `Start_Here.ipynb` notebook. It acts as a control panel for the entire project. Make sure to download this project via https://github.com/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb
 
 ### Step-by-Step Instructions
-
-1.  **Open `Start_Here.ipynb`**: Launch the notebook in Google Colab (Jupyter Notebook should also work but I never tested this on that).
+0.  **Open `Start_Here.ipynb`**: Launch the notebook in Google Colab (Jupyter Notebook should also work but I never tested this on that).
+1.  **Run Step 0 (GPU Check)**
+    * Click "Run" on the cell.
+    * Check that you are using a GPU, as that is better. The bigger (VRAM) the better in this case.
 2.  **Run Step 1 (Installation)**:
-    * Click "Run" on the first cell.
+    * Click "Run" on the cell.
     * **CRITICAL:** This step installs required libraries and **will automatically crash/restart the runtime**.
     * *Ignore the "Session Crashed" popup.* This is necessary to apply the new libraries.
 3.  **Run Step 1.5 (Admin Pre-Load) [Optional]**:
