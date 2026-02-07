@@ -204,8 +204,8 @@ def run_sentiment_compass(
             ax.set_title(title_text, fontsize=18, pad=20, fontweight='bold', color='white')
 
             disclaimer_text = (
-                "This mapping uses keyword lookup with basic negation. "
-                "It estimates sentiment but doesn't capture nuances like sarcasm, double negatives, or long/complex contexts."
+                "Mapping uses keyword lookup with basic negation. "
+                "Estimates sentiment but lacks nuance capture: sarcasm, double negatives, long/complex contexts, etc."
             )
             fig.text(0.5, 0.05, disclaimer_text, 
                      ha='center', va='bottom', 

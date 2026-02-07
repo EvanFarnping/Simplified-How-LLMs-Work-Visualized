@@ -7,6 +7,8 @@ This project was done in my limited spare time in a few days over a few hours, s
 
 While I aimed for maximum accuracy, errors may still occur and or be present. Please feel free to reach out or submit a pull request with any corrections.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb)
+
 ## How Do LLMs Actually Work
 
 Before running the code, it helps to understand what you are looking at.
