@@ -2,12 +2,7 @@
 This project is a simplified, visual educational tool designed to peel back the curtain on Large Language Models.  
 It was originally developed for DSAIY in collaboration with researchers from MIT, Brown, and Harvard to help pre-college students understand that AI is not magic. 
 
-Note that this project is not designed to build chatbots, agents, or production-ready software.  
-It is more of a scientific instrument designed to let you visualize how different AI models essentially think, predict, and behave under different conditions.  
-There are several design decisions in this project that under normal conditions would be poor, such as the unloading of memory.  
-However, these choices were made because most people using this project will have very limited familiarity with Python or coding.  
-Requiring students to navigate files and change various settings would be challenging.  
-This project was done in my limited spare time in a few days over a few hours, so I couldn't make the effort to optimize everything properly, especially for an educational context perfectly.
+Note that this project is not designed to build chatbots, agents, or production-ready software. It is more of a scientific instrument designed to let you visualize how different AI models essentially think, predict, and behave under different conditions. There are several design decisions in this project that under normal conditions would be poor, such as the unloading of memory. However, these choices were made because most people using this project will have very limited familiarity with Python or coding. Requiring students to navigate files and change various settings would be challenging. This project was done in my limited spare time in a few days over a few hours, so I couldn't make the effort to optimize everything properly, especially for an educational context perfectly.
 
 While I aimed for maximum accuracy, errors may still occur and or be present. Please feel free to reach out or submit a pull request with any corrections.
 
@@ -64,7 +59,8 @@ We map the predicted words of the AI onto a psychological chart called the Circu
 Y-Axis Activity: High Energy versus Low Energy.
 X-Axis Valence: Positive Feeling versus Negative Feeling.
 
-What to look for: If you act sad, does the AI move into the Sad or Passive quadrant? If you act aggressive, does it move to the Angry or Active quadrant?  
+What to look for: If you act sad, does the AI move into the Sad or Passive quadrant?  
+If you act aggressive, does it move to the Angry or Active quadrant?  
 Note how the model considers certain tokens based on its Persona and given Prompt.  
 Now imagine if the model had a very high temperature setting, will it be more likely to suggest a negative word now that may influence you as the user?
 
@@ -129,7 +125,9 @@ Phi-4-mini will likely run on any computer built after COVID-19 Era.
 
 ## How to Run It For Google Colab
 
-The easiest way to use this project is via the included `Start_Here.ipynb` notebook. It acts as a control panel for the entire project.  
+The easiest way to use this project is via the included `Start_Here.ipynb` notebook.  
+It acts as a control panel for the entire project.  
+
 Make sure to download this project via https://github.com/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb)
