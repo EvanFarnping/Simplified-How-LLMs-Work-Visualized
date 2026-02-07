@@ -161,7 +161,16 @@ The easiest way to use this project is via the included `Start_Here.ipynb` noteb
     * You must **Factory Reset** the runtime to clear the half-downloaded file.
     * Go to: `Runtime` -> `Disconnect and Delete Runtime`.
     * Restart from Step 1.
-    * **Do not** attempt to run "Heavyweight" models on standard instances.
+    * **Do not** attempt to run "Heavyweight" models on standard instances. 
+
+### 3. The "To Many Request" Error (Hugging Face)
+* **Symptom:** You are running things as usual and the terminal responds that you are sending to many requests. HuggingFace will likely be mentioned.
+* **Cause:** The Token associated with HuggingFace is free, but does have rate limits.
+    * *Example:* In Step 2, there is a token that is used to access the information from HuggingFace, the place with the AI models we are getting. 
+* **Solution:**
+    * You must switch out the **HuggingFace Token** in Step 2.
+    * Delete the old Token and then uncomment the other options. You can also just create your own if you are comfortable doing so.
+    * Restart from step 2 to load in the new Token to have access again.
 
 ### 3. "Module Not Found" Error
 * **Cause:** You likely ran Step 2 before Step 1 finished, or after a factory reset.
