@@ -115,7 +115,9 @@ TinyLlama and GPT-2 will run on most modern laptops.
 Mistral and DeepSeek require a computer with a good graphics card and decent RAM. If the program crashes, try a smaller model.
 Phi-4-mini will likely run on any computer built after COVID-19 Era.
 
-## 🚀 How to Run It For Google Colab 🚀
+---
+
+## How to Run It For Google Colab
 
 The easiest way to use this project is via the included `Start_Here.ipynb` notebook. It acts as a control panel for the entire project. Make sure to download this project via https://github.com/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb
 
@@ -141,7 +143,7 @@ The easiest way to use this project is via the included `Start_Here.ipynb` noteb
 
 ---
 
-## ⚠️ Troubleshooting & Edge Cases ⚠️
+## Troubleshooting & Edge Cases
 
 ### 1. The "Session Crashed" Popup (RAM Limit)
 * **Symptom:** You try to load a model (e.g., `Mistral-7B`) and the session immediately restarts or goes black.
@@ -199,27 +201,28 @@ Advanced students can edit the core logic files directly in the browser:
 
 ### Stats (You likely don't need to know this. Above info should suffice): 
 CPU Only:
-N/A | ~13 GB (Std) / 51 GB (High) | vCompute: 2 – 8 | Baseline Performance
+* N/A | ~13 GB (Std) / 51 GB (High) | vCompute: 2 – 8 | Baseline Performance
 
 T4 GPU:	
-VRAM: 16 GB | System RAM: GDDR6 ~13 GB (Std) / 51 GB (High) | vCompute: 2 – 8 | Performance: 65 TFLOPS
+* VRAM: 16 GB | System RAM: GDDR6 ~13 GB (Std) / 51 GB (High) | vCompute: 2 – 8 | Performance: 65 TFLOPS
 
 L4 GPU:	
-VRAM: 24 GB GDDR6 | System RAM: ~53 – 64 GB | vCompute: 12 | Performance: 242 TFLOPS
+* VRAM: 24 GB GDDR6 | System RAM: ~53 – 64 GB | vCompute: 12 | Performance: 242 TFLOPS
 
 A100 GPU:	
-VRAM: 40 GB / 80 GB* | System RAM: ~84 – 167 GB | vCompute: 12 | Performance: 312 TFLOPS
+* VRAM: 40 GB / 80 GB* | System RAM: ~84 – 167 GB | vCompute: 12 | Performance: 312 TFLOPS
 
 H100 GPU:	
-VRAM: 80 GB HBM3 | System RAM: ~84 – 90 GB+ | vCompute: 12 | Performance: 1,000+ TFLOPS
+* VRAM: 80 GB HBM3 | System RAM: ~84 – 90 GB+ | vCompute: 12 | Performance: 1,000+ TFLOPS
 
 v5e-1 TPU:	
-VRAM: 16 GB HBM2 | System RAM: ~48 GB | vCompute: 24 | Performance: 197 TFLOPS
+* VRAM: 16 GB HBM2 | System RAM: ~48 GB | vCompute: 24 | Performance: 197 TFLOPS
 
 v6e-1 TPU:	
-VRAM: 32 GB HBM3 | System RAM: ~176 GB | vCompute: 44 | Performance: 918 TFLOPS
+* VRAM: 32 GB HBM3 | System RAM: ~176 GB | vCompute: 44 | Performance: 918 TFLOPS
+
+Created by **Evan Farnping** 2026
+* **LinkedIn:** https://www.linkedin.com/in/evanfarnping/
+* **Personal Website:** https://www.evanfarnping.com/
 
 License: MIT License. Free for educational use.
-Created by EvanFarnping 2026
-LinkedIn: https://www.linkedin.com/in/evanfarnping/
-Personal Website: https://www.evanfarnping.com/
