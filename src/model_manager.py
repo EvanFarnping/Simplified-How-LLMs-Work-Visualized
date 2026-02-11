@@ -77,11 +77,13 @@ MODEL_MAP = {
     },
 
     # https://huggingface.co/microsoft/Phi-4-mini-instruct 
-    # ~8 GB (Not quantized), 3.8B parameters.
-    # Microsoft's efficient small model series.
+    # ~8 GB (Unquantized), 3.8B parameters.
+    # Microsoft's efficient small-model series.
     # Outperforms similar-sized models in reasoning and coding benchmarks.
-    # Designed for on-device inference and fine-tuning, with strong performance in math and logic tasks.
-    # This model approaches Gemini 1.5 Flash and even GPT o1-mini & GPT-4o in precise tasks (assuming 14B Phi version).
+    # Designed for on-device inference and fine-tuning, with strong performance in math and logic.
+    # This model approaches Gemini 1.5 Flash and even GPT-4o in precise tasks (assuming the 14B Phi version).
+    # Phi-4-mini-4B specifically is highly competitive against GPT-3.5 and outperforms it in most cases. 
+    # It even rivals GPT-4o mini's performance in certain categories.
     "Phi-4-mini-4B": {
         "repo": "microsoft/Phi-4-mini-instruct",
         "arch": None,
@@ -89,14 +91,14 @@ MODEL_MAP = {
         "load_in_4bit": False
     },
 
-    ##### --- MEDIUM WEIGHT MODELS (GPU Usage, GPU Resources Are Practically Required) --- #####
-    # (GPU Usage, 1-2 Medium-to-High-End GPU Card Resources Usually Required)
+    ##### --- MEDIUM WEIGHT MODELS (GPU Resources Required) --- #####
+    # (Usually requires 1-2 medium-to-high-end GPUs)
 
     # https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
-    # ~14 GB, 5-7 GB quantized (4-bit), 7B parameters
-    # Versatile model from Mistral AI.
-    # Comparable and in many cases, better than early GPT-3.5 in general capabilities.
-    # Known for fast inference and strong performance in instruction-following, coding, and multilingual tasks.
+    # ~14 GB (unquantized), 5-7 GB quantized (4-bit), 7B parameters.
+    # A versatile model from Mistral AI (EU).
+    # Overall superior to GPT-3.5 in general capabilities; approaches GPT-4o mini in performance.
+    # Known for fast inference and strong instruction-following, coding, and multilingual tasks.
     "Mistral-7B": { 
         "repo": "mistralai/Mistral-7B-Instruct-v0.3",
         "arch": None,
@@ -105,9 +107,9 @@ MODEL_MAP = {
     },
 
     # https://huggingface.co/Qwen/Qwen2.5-14B-Instruct 
-    # ~ 30GB, ~9 GB quantized (4-bit), 14B parameters.
-    # Weaker reasoning than "deepseek-ai/DeepSeek-V2-Lite-Chat", but overall still good general abilities.
-    # In terms of performance, it's a lot closer to GPT-3.5 performance overall than Mistral-7B.
+    # ~30 GB (unquantized), ~8 GB quantized (4-bit), 14B parameters.
+    # Somewhat weaker reasoning than DeepSeek-V2-Lite, but maintains strong general abilities.
+    # Outperforms Mistral-7B and surpasses GPT-4o mini in many categories.
     "Qwen2.5-14B": {
         "repo": "Qwen/Qwen2.5-14B-Instruct",
         "arch": None,
@@ -116,12 +118,12 @@ MODEL_MAP = {
     },
 
     # https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite-Chat
-    # ~18 GB, 7-8 GB quantized (4-bit), 16B parameters.
-    # Open-source reasoning model from DeepSeek.
-    # Cutting edge model from China exploring new ways to develop LLM based models.
-    # Uses Reinforcement Learning, Mixture of Experts, Multi-Head Latent Attention, ETC.
-    # Positioned between advanced models like Claude 3.5 Sonnet and o1-mini in coding and reasoning applications.
-    # This can be run on a 2080Ti (source Evan Farnping's Personal Computer).
+    # ~18 GB (unquantized), 7-8 GB quantized (4-bit), 16B parameters.
+    # An open-source reasoning model from DeepSeek.
+    # A cutting-edge model from China exploring novel LLM architectures (MoE, Multi-Head Latent Attention).
+    # Positioned between Claude 3.5 Sonnet and o1-mini in coding and reasoning. 
+    # Often equivalent to or better than GPT-4o mini; approaches GPT-4o level performance.
+    # Can be run on a consumer-grade 2080 Ti (This is what Evan can run on his 2080Ti).
     "DeepSeek-Lite": {
         "repo": "deepseek-ai/DeepSeek-V2-Lite-Chat",
         "arch": None,
@@ -129,13 +131,13 @@ MODEL_MAP = {
         "load_in_4bit": True
     },
 
-    ##### --- HEAVIER WEIGHT AND MORE MODERN MODELS (Closer to GPT-4, Gemini 2.5 Pro, (2023-2024 models), ETC.) --- #####
-    # (GPU Usage, 1-3 High-End GPU Card Resources Usually Required) ---
+    ##### --- HEAVYWEIGHT & MODERN MODELS (GPT-4 / Gemini 2.0 Class) --- #####
+    # (Usually requires 1-3 high-end GPUs)
     
     # https://huggingface.co/Qwen/Qwen2.5-32B-Instruct 
-    # Mainstream model from Alibaba (China).
-    # When tuned well, can be comparable to GPT-4 to GPT-4o performance on various benchmarks.
-    # ~60-65 GB, ~35-40 GB quantized (4-bit), 33B parameters
+    # A mainstream model from Alibaba (China).
+    # When tuned well, it is comparable to GPT-4 or GPT-4o on various benchmarks.
+    # ~60-65 GB (unquantized), ~35-40 GB quantized (4-bit), 33B parameters.
     "Qwen2.5-32B": {
         "repo": "Qwen/Qwen2.5-32B-Instruct",
         "arch": None,
@@ -144,10 +146,10 @@ MODEL_MAP = {
     },
 
     # https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
-    # Model from DeepSeek (China),
-    # ~60+ GB, 30-40+ GB quantized (4-bit), 33B parameters (effective via MoE)
-    # Consistently competitive against OpenAI-o1-mini (GPT o1-mini).
-    # Focused on reasoning and coding, not necessarily for chatting.
+    # A model from DeepSeek (China).
+    # ~60+ GB (unquantized), 30-40+ GB quantized (4-bit), 33B parameters.
+    # Consistently competitive against OpenAI's o1-mini.
+    # Optimized for reasoning and coding rather than general chat.
     "DeepSeek-R1": {
         "repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
         "arch": None,
@@ -156,10 +158,10 @@ MODEL_MAP = {
     },
 
     # https://huggingface.co/ai21labs/AI21-Jamba2-Mini
-    # ~60+ GB, 25-30+ GB quantized (4-bit), 12B active parameters (52B total)
-    # Hybrid MoE-Mamba model from AI21 Labs. Very experimental design/different design than what is mainstream.
-    # Allegedly, performance is comparable and even better vs. original GPT-4, even GPT-4o in some cases.
-    # Was released on Jan 8th 2026, very new, claims are skeptical.
+    # ~60+ GB (unquantized), 25-30+ GB quantized (4-bit), 12B active parameters (52B total).
+    # A hybrid MoE-Mamba model from AI21 Labs. Features an experimental architecture.
+    # Claims to outperform the original GPT-4 and match GPT-4o in some cases.
+    # Released Jan 8th, 2026; these performance claims are currently met with hard skepticism.
     "Jamba-2-Mini": {
         "repo": "ai21labs/AI21-Jamba2-Mini",
         "arch": None,
@@ -168,8 +170,8 @@ MODEL_MAP = {
     },
 
     # https://huggingface.co/Qwen/Qwen2.5-72B-Instruct
-    # 120GB+, 60-80GB quantized (4-bit), 73B parameters.
-    # Considered to be stronger than GPT-3.5 & GPT-4, even GPT-4 Turbo in some cases.
+    # 120GB+ (unquantized), 40-60GB VRAM quantized (4-bit), 73B parameters.
+    # Considered to be near GPT-4o performance in narrow use cases.
     "Qwen2.5-72B": {
         "repo": "Qwen/Qwen2.5-72B-Instruct",
         "arch": None,
@@ -177,11 +179,36 @@ MODEL_MAP = {
         "load_in_4bit": True
     },
 
-    # NOTE SPECIAL
+    # https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct
+    # Generally superior to Qwen2.5-72B.
+    # 50-60GB VRAM quantized (4-bit), 80B parameters.
+    # Utilizing an advanced architecture nearing 100B parameters, it achieves performance much closer to GPT-4o.
+    "Qwen3-80B-Instruct": {
+        "repo": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+        "arch": None,
+        "trust_remote_code": True,
+        "load_in_4bit": True
+    },
+
+    # https://huggingface.co/openai/gpt-oss-120b
+    # Generally outperforms Qwen3-80B-Instruct, though token generation is often slower.
+    # ~60GB VRAM quantized (4-bit), 120B parameters.
+    # Released by OpenAI; highly effective for agentic tasks, coding, and reasoning. 
+    # Currently the model in the 100B+ class that comes closest to GPT-4o's overall performance, beating it in some cases.
+    "OpenAi-GPT-OSS-120B": {
+        "repo": "openai/gpt-oss-120b",
+        "arch": None,
+        "trust_remote_code": True,
+        "load_in_4bit": True
+    },
+
+    # NOTE: Requires Meta credentials
     # https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct 
-    # Example of a "small" modern model at the cutting edge. 109B Parameters (17B+ Active). 200+ GB of VRAM, 
-    # A very modern and cutting edge model made by Meta/FaceBook. (Likely need to share contact info).
-    # Essentially the same performance, if not, very similar performance to GPT-4 and GPT-4o.
+    # A "small" modern flagship model. 109B Parameters (17B+ Active). 
+    # Requires 60-80 GB of VRAM (4-bit); can run on a single H100 card (80GB).
+    # Rivals GPT-4o in context window size, coding, and efficiency.
+    # The larger "Llama 4 Maverick" is expected to match or exceed GPT-4o in most applications.
+    # OpenAi-GPT-OSS-120B and Llama-4-Scout are comparable for the most part.
     "Llama-4-Scout": {
         "repo": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
         "arch": None,
@@ -189,10 +216,10 @@ MODEL_MAP = {
         "load_in_4bit": True
     }
 
-    # NOTE. 
-    # Once you start going beyond 50B+ parameter models, 
-    # you're dealing with very advanced models aiming to compete against mainstream models.
-    # For example, most big and the most advance models have special designs and trillions of parameters. 
+    # NOTE:
+    # Models exceeding 70-100B parameters approach flagship versions designed to compete with closed-source systems.
+    # These are generally not intended for average consumers; for instance, most 100GB+ models require an H100—a $25,000 GPU card. 
+    # Furthermore, the most advanced models often utilize specialized architectures and can exceed 500B to 1T parameters.
 }
 
 class ModelManager:
@@ -247,7 +274,7 @@ class ModelManager:
             self.tokenizer = AutoTokenizer.from_pretrained(config["repo"], 
                                                            trust_remote_code=config["trust_remote_code"])
 
-            active_device_map = "auto"
+            active_device_map = "auto" # Terrible hard-code, assume models don't change.
             is_heavy_qwen = "Qwen" in selection_name and "0.5B" not in selection_name and "1.7B" not in selection_name
             if "DeepSeek" in selection_name or is_heavy_qwen: # Due to cuda and cpu swap being poor.
                 active_device_map = "cuda"

@@ -60,16 +60,16 @@ TODO: CHOOSE A MODEL
         GPT-2
         Pythia-160M
 
-(Small Size. Close (sorta) to VERY early GPT-3, Gemini 1.5 Flash performance. Common for small devices or niche apps).
+(Small Size. Close (sorta) to early GPT-3.5, Gemini 1.5 Flash performance. Common for small devices or niche apps).
     MODELS:
         TinyLlama-1.1B
         Qwen3-1.7B (More of a technical and thinking model)
-        Phi-4-mini-4B (One of my personal favorites. Despite being small, it's a well designed and a good model even when compared to models 4x its size.)
+        Phi-4-mini-4B (One of my personal favorites. Despite being small, it's a well designed and beats GPT-3.5 in many cases.)
 
-(Small to Medium- size. Kind of close to early GPT-3.5 performance. Used in many simple personal AI app chatbots online).
+(Small to Medium- size. Kind of close to early GPT-4 performance. Used in many simple personal AI app chatbots online).
     MODEL:
         Mistral-7B
-(Small+ to Medium size. Closer to early GPT-3.5 performance. Used in many personal AI app chatbots online).
+(Small+ to Medium size. Closer to early GPT-4 performance. Used in many personal AI app chatbots online).
     MODEL:
         Qwen2.5-14B
 (Small+ to Medium+ size. Kind of close to Claude 3.5 Sonnet & o1-mini performance. Focusing on reasoning and Mixture of Experts).
@@ -85,7 +85,7 @@ TODO: CHOOSE A MODEL
 (Medium+ size. Allegedly, performance is comparable and even better vs. original GPT-4, even GPT-4o in some cases).
     MODEL:
         Jamba-2-Mini (Very new, released in Jan 8th 2026).
-NOTE: (See model_manager.py to try to run other models, especially larger ones).
+NOTE: (See model_manager.py to try to run other models, especially larger ones, like OpenAI's open-weighted 120B model).
 """
 ######################################## | TODO | ########################################
 SELECTED_MODEL = "Phi-4-mini-4B" # TODO EDIT ME! CHOOSE A MODEL FROM ABOVE!!!
