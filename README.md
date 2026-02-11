@@ -95,7 +95,7 @@ Caveman: Breaks the grammar capabilities of the model.
 Liar: Intentionally aligns the model to output false information.
 Direct: Strips away the polite Assistant personality.
 
-This demonstrates that Personality in AI is just a set of hidden instructions steering the probabilities.
+This demonstrates that Personality in AI is often just a set of hidden instructions steering the probabilities. However, note that nearly all models have their own custom prompting logic that is optimal for that specific model. For example, the ideal prompting logic for GPT-5 is likely going to differ when it comes to the optimal prompting logic of Gemini or Qwen. In this project, we generalize the prompting so that it will, for the most part, work with most models.
 
 ## How to Run It
 
