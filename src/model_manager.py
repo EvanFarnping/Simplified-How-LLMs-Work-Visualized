@@ -199,7 +199,7 @@ MODEL_MAP = {
         "repo": "openai/gpt-oss-120b",
         "arch": None,
         "trust_remote_code": True,
-        "load_in_4bit": True
+        "load_in_4bit": False
     },
 
     # NOTE: Requires Meta credentials
@@ -278,6 +278,9 @@ class ModelManager:
             is_heavy_qwen = "Qwen" in selection_name and "0.5B" not in selection_name and "1.7B" not in selection_name
             if "DeepSeek" in selection_name or is_heavy_qwen: # Due to cuda and cpu swap being poor.
                 active_device_map = "cuda"
+
+            if "Qwen3-80B-Instruct" in selection_name:
+                active_device_map = {"": 0}
 
             if self.device == "cuda":
                 target_dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
