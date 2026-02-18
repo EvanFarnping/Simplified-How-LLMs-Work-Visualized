@@ -287,13 +287,19 @@ class ModelManager:
             else:
                 target_dtype = torch.float32
 
+            load_kwargs_d9ct = {
+                "trust_remote_code": config["trust_remote_code"],
+                "device_map": active_device_map,
+                "attn_implementation": "eager",
+                "dtype": target_dtype
+            }
+            
+            if quantization_config is not None:
+                load_kwargs_d9ct["quantization_config"] = quantization_config
+
             self.model = AutoModelForCausalLM.from_pretrained(
                 config["repo"],
-                trust_remote_code=config["trust_remote_code"],
-                quantization_config=quantization_config,
-                device_map=active_device_map,
-                attn_implementation="eager",
-                dtype=target_dtype
+                **load_kwargs_d9ct
             )
         
         # Deepseek has different caching logic that I don't want to deal with since it's very different than the other models
