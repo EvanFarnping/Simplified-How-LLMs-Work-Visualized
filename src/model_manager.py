@@ -291,13 +291,23 @@ class ModelManager:
             
             # Hardcode flash vs. eager logic.
             # TODO spda may break visuals due to attention output logic is different?
-            if "GPT-2" not in selection_name:
+            if "OpenAi-GPT-OSS-120B" in selection_name or "Qwen3-80B-Instruct" in selection_name:
                 if torch.cuda.is_available() and torch.cuda.get_device_capability()[0] >= 8:
-                    target_attention = "flash_attention_2"
-                    print(target_attention)
+                    try: 
+                        target_attention = "flash_attention_2"
+                        print(selection_name)
+                        print(target_attention)
+                    except Exception as e:
+                        print(selection_name)
+                        print(target_attention)
+                        print(e)
                 else:
-                    target_attention = "sdpa"
-                    print(target_attention)
+                    try: 
+                        target_attention = "sdpa"
+                    except Exception as e:
+                        print(selection_name)
+                        print(target_attention)
+                        print(e)
 
             load_kwargs = {
                 "trust_remote_code": config["trust_remote_code"],
