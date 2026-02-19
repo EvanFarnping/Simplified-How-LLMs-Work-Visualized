@@ -1,6 +1,8 @@
-# Simplified-LLMs-Visualized
+# Simplified-How-LLMs-Work-Visualized
 This project is a simplified, visual educational tool designed to peel back the curtain on Large Language Models.  
 It was originally developed for DSAIY in collaboration with researchers from MIT, Brown, and Harvard to help pre-college students understand that AI is not magic. 
+
+Nearly anyone can use this project. Even those with zero coding experience can simply open the "Open In Colab" link, follow the step-by-step instructions, and get a glimpse of how LLM models work under the hood. The free version of Google Colab works perfectly fine, though it may be a bit slower than the paid PRO+ versions. This project was also designed to be easily run on your local computer via the main.py file in the "main_configs" folder. For those with a little more familiarity with coding, you can directly change and interact with the experiments in the "scenarios_to_try" folder. Every file is clearly labeled to show what can be modified, allowing you to simply click the "run" button to see your changes in action. You will though, need to yourself check that you have compatible hardware.
 
 Note that this project is not designed to build chatbots, agents, or production-ready software. It is more of a scientific instrument designed to let you visualize how different AI models essentially think, predict, and behave under different conditions. There are several design decisions in this project that under normal conditions would be poor, such as the unloading of memory. However, these choices were made because most people using this project will have very limited familiarity with Python or coding. Requiring students to navigate files and change various settings would be challenging. This project was done in my limited spare time in a few days over a few hours, so I couldn't make the effort to optimize everything properly, especially for an educational context perfectly.
 
@@ -8,7 +10,7 @@ While I aimed for maximum accuracy, errors may still occur and or be present. Pl
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb)
 
-[![DSAIY PowerPoint](https://img.shields.io/badge/View-PowerPoint-B7472A?logo=microsoftpowerpoint&logoColor=white)](https://1drv.ms/p/c/364311fb51f8abd5/IQA7w1tBay-sQ7mK_ntvlC2kAbkIiTxa0MazbAqjsx4vxhc?e=JtW2ey)
+[![DSAIY PowerPoint](https://img.shields.io/badge/DSAIY-PowerPoint-B7472A?logo=microsoftpowerpoint&logoColor=white)](https://1drv.ms/p/c/364311fb51f8abd5/IQA7w1tBay-sQ7mK_ntvlC2kAbkIiTxa0MazbAqjsx4vxhc?e=JtW2ey)
 
 ## How Do LLMs Actually Work
 
