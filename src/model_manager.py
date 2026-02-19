@@ -287,19 +287,31 @@ class ModelManager:
             else:
                 target_dtype = torch.float32
 
-            load_kwargs_d9ct = {
+            target_attention = "eager"
+            
+            # Hardcode flash vs. eager logic.
+            # TODO spda may break visuals due to attention output logic is different?
+            if "GPT-2" not in selection_name:
+                if torch.cuda.is_available() and torch.cuda.get_device_capability()[0] >= 8:
+                    target_attention = "flash_attention_2"
+                    print(target_attention)
+                else:
+                    target_attention = "sdpa"
+                    print(target_attention)
+
+            load_kwargs = {
                 "trust_remote_code": config["trust_remote_code"],
                 "device_map": active_device_map,
-                "attn_implementation": "eager",
+                "attn_implementation": target_attention,
                 "dtype": target_dtype
             }
             
             if quantization_config is not None:
-                load_kwargs_d9ct["quantization_config"] = quantization_config
+                load_kwargs["quantization_config"] = quantization_config
 
             self.model = AutoModelForCausalLM.from_pretrained(
                 config["repo"],
-                **load_kwargs_d9ct
+                **load_kwargs
             )
         
         # Deepseek has different caching logic that I don't want to deal with since it's very different than the other models
