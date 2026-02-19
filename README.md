@@ -6,7 +6,7 @@ Nearly anyone can use this project. Even those with zero coding experience can s
 
 Note that this project is not designed to build chatbots, agents, or production-ready software. It is more of a scientific instrument designed to let you visualize how different AI models essentially think, predict, and behave under different conditions. There are several design decisions in this project that under normal conditions would be poor, such as the unloading of memory. However, these choices were made because most people using this project will have very limited familiarity with Python or coding. Requiring students to navigate files and change various settings would be challenging. This project was done in my limited spare time in a few days over a few hours, so I couldn't make the effort to optimize everything properly, especially for an educational context perfectly.
 
-While I aimed for maximum accuracy, errors may still occur and or be present. Please feel free to reach out or submit a pull request with any corrections.
+While I aimed for maximum accuracy, errors may still occur. Please feel free to reach out or submit a pull request with corrections. Keep in mind that many LLM and AI topics have been intentionally simplified for educational clarity; I have tried to note these instances wherever they occur.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb)
 
@@ -249,7 +249,7 @@ v5e-1 TPU:
 v6e-1 TPU:	
 * VRAM: 32 GB HBM3 | System RAM: ~176 GB | vCompute: 44 | Performance: 918 TFLOPS
 
-Created by **Evan Farnping** 2026
+Created by **Evan Farnping** 2026 | Feel Free to Contact Me
 * **LinkedIn:** https://www.linkedin.com/in/evanfarnping/
 * **Personal Website:** https://www.evanfarnping.com/
 
