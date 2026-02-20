@@ -1,6 +1,10 @@
 import torch
 import torch.nn.functional as F
 
+# ============================================================================== #
+#                DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING!                #
+# ============================================================================== #
+
 class Predictor:
     """
     Responsible for Next-Token Prediction logic.

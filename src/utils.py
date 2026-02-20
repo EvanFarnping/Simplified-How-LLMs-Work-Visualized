@@ -1,5 +1,9 @@
 import yaml
 
+# ============================================================================== #
+#                DO NOT TOUCH UNLESS YOU KNOW WHAT YOU ARE DOING!                #
+# ============================================================================== #
+
 def clean_token(token, mode="visualize"):
     """
     Cleans tokenizer artifacts (like Ġ, Ċ, \ufffd) based on the visualization need.

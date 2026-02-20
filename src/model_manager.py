@@ -293,21 +293,21 @@ class ModelManager:
             # TODO spda may break visuals due to attention output logic is different?
             if "OpenAi-GPT-OSS-120B" in selection_name or "Qwen3-80B-Instruct" in selection_name:
                 if torch.cuda.is_available() and torch.cuda.get_device_capability()[0] >= 8:
-                    try: 
-                        target_attention = "flash_attention_2"
-                        print(selection_name)
-                        print(target_attention)
-                    except Exception as e:
-                        print(selection_name)
-                        print(target_attention)
-                        print(e)
+                    target_attention = "flash_attention_2"
+                    
+                    try:
+                        import flash_attn # Google Colab might not recognize the input during the session...
+                    except ImportError:
+                        print(f'{selection_name} detected.')
+                        print("Installing 'flash_attention_2' (May take ~5 mins).")
+                        import subprocess
+                        import sys
+                        subprocess.check_call([sys.executable, "-m", "pip", "install", "flash-attn", "--no-build-isolation"])
+                        print("'flash_attention_2' successfully installed.")
+
                 else:
-                    try: 
-                        target_attention = "sdpa"
-                    except Exception as e:
-                        print(selection_name)
-                        print(target_attention)
-                        print(e)
+                    target_attention = "sdpa"
+                    print("Cuda Capability Needs to be Checked")
 
             load_kwargs = {
                 "trust_remote_code": config["trust_remote_code"],
