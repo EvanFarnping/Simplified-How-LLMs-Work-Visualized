@@ -298,13 +298,16 @@ class ModelManager:
                     try:
                         import flash_attn # Google Colab might not recognize the input during the session...
                     except ImportError:
-                        print(f'{selection_name} detected.')
-                        print("Installing 'flash_attention_2' (May take ~5 mins).")
-                        import subprocess
-                        import sys
-                        subprocess.check_call([sys.executable, "-m", "pip", "install", "flash-attn", "--no-build-isolation"])
-                        print("'flash_attention_2' successfully installed.")
-
+                        try:
+                            print(f'{selection_name} detected.')
+                            print("Installing 'flash_attention_2' (May take ~5-10 mins).")
+                            import subprocess
+                            import sys
+                            subprocess.check_call([sys.executable, "-m", "pip", "install", "flash-attn==2.7.3", "--no-build-isolation"])
+                            print("'flash_attention_2' installed.")
+                        except subprocess.CalledProcessError as e:
+                            print("Installation failed:")
+                            print(e.stderr)
                 else:
                     target_attention = "sdpa"
                     print("Cuda Capability Needs to be Checked")
