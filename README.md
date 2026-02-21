@@ -10,7 +10,7 @@ While I aimed for maximum accuracy, errors may still occur. Please feel free to 
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/EvanFarnping/Simplified-How-LLMs-Work-Visualized/blob/main/Start_Here.ipynb)
 
-[![DSAIY PowerPoint](https://img.shields.io/badge/DSAIY-PowerPoint-B7472A?logo=microsoftpowerpoint&logoColor=white)](https://1drv.ms/p/c/364311fb51f8abd5/IQA7w1tBay-sQ7mK_ntvlC2kAbkIiTxa0MazbAqjsx4vxhc?e=JtW2ey)
+[![LLM-AI-a-thon Activity PowerPoint](https://img.shields.io/badge/LLM-AI-a-thon-Activity-PowerPoint-B7472A?logo=microsoftpowerpoint&logoColor=white)](https://1drv.ms/p/c/364311fb51f8abd5/IQCmu_amf05wTIWsrpj-soMVAVkiEPZA5jN6gTmMjWXt28I?e=zTgwrd)
 
 ## How Do LLMs Actually Work
 
